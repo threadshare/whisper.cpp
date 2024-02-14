@@ -42,9 +42,9 @@ let package = Package(
             resources: [.process("ggml-metal.metal")],
             publicHeadersPath: "spm-headers",
             cSettings: [
-                .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
+                //.unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
                 .define("GGML_USE_ACCELERATE"),
-                .unsafeFlags(["-fno-objc-arc"]),
+                //.unsafeFlags(["-fno-objc-arc"]),
                 .define("GGML_USE_METAL")
                 // NOTE: NEW_LAPACK will required iOS version 16.4+
                 // We should consider add this in the future when we drop support for iOS 14
